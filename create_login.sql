@@ -9,9 +9,9 @@ rating CHAR(1) DEFAULT 'D'
 
 CREATE TABLE surgeries (
 surgery_id NUMBER(5),
-surgery_date DATE,
+surgery_date DATE NOT NULL,
 type VARCHAR(8),
-branch_id NUMBER(3)
+branch_id NUMBER(3) NOT NULL
 );
 
 CREATE TABLE vets (
@@ -21,7 +21,7 @@ title VARCHAR(15),
 first_name VARCHAR(16),
 last_name VARCHAR(20),
 phone_number VARCHAR(13),
-surgery_id NUMBER(5)
+surgery_id NUMBER(5) NOT NULL
 );
 
 CREATE TABLE animals (
