@@ -103,3 +103,5 @@ ALTER TABLE prescriptions
 ADD CONSTRAINT fk_p_animals
 FOREIGN KEY (pet_number)
 REFERENCES animals (pet_number);
+
+COMMIT;
