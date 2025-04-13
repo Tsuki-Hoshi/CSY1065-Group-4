@@ -74,7 +74,7 @@ description VARCHAR(40)
 
 CREATE TABLE prescriptions (
 medication_id NUMBER(5),
-animal_id NUMBER(5),
+pet_number NUMBER(5),
 quantity NUMBER(3),
 dosage VARCHAR(20)
 );
