@@ -1,13 +1,13 @@
-DROP TABLE branches;
-DROP TABLE surgeries;
-DROP TABLE vets;
-DROP TABLE animals;
-DROP TABLE appointments;
-DROP TABLE treatments;
-DROP TABLE tests;
-DROP TABLE results;
-DROP TABLE medications;
 DROP TABLE prescriptions;
+DROP TABLE medications;
+DROP TABLE results;
+DROP TABLE tests;
+DROP TABLE treatments;
+DROP TABLE appointments;
+DROP TABLE animals;
+DROP TABLE vets;
+DROP TABLE surgeries;
+DROP TABLE branches;
 PURGE RECYCLEBIN;
 
 COMMIT;
