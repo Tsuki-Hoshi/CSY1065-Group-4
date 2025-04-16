@@ -62,22 +62,10 @@ ADD CONSTRAINT fk_a_animals
 FOREIGN KEY (pet_number)
 REFERENCES animals (pet_number);
 
--- !!!The constraint name are the same, need team opinion here!!!
-
--- ALTER TABLE treatments
--- ADD CONSTRAINT fk_t_appointments
--- FOREIGN KEY (vet_id)
--- REFERENCES appointments (vet_id);
-
--- ALTER TABLE treatments
--- ADD CONSTRAINT fk_t_appointments
--- FOREIGN KEY (pet_number)
--- REFERENCES appointments (pet_number);
-
--- ALTER TABLE treatments
--- ADD CONSTRAINT fk_t_appointments
--- FOREIGN KEY (appointment_date)
--- REFERENCES appointments (appointment_date);
+ALTER TABLE treatments
+ADD CONSTRAINT fk_t_appointments
+FOREIGN KEY (vet_id, pet_number, appointment_date)
+REFERENCES appointments (vet_id, pet_number, appointment_date);
 
 ALTER TABLE results
 ADD CONSTRAINT fk_r_tests
