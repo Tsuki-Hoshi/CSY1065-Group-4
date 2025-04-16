@@ -1,3 +1,71 @@
+-- Dropping Primary Key Constraints
+
+ALTER TABLE branches
+DROP CONSTRAINT pk_branches;
+
+ALTER TABLE surgeries
+DROP CONSTRAINT pk_surgeries;
+
+ALTER TABLE vets
+DROP CONSTRAINT pk_vets;
+
+ALTER TABLE animals
+DROP CONSTRAINT pk_animals;
+
+ALTER TABLE appointments
+DROP CONSTRAINT pk_appointments;
+
+ALTER TABLE treatments
+DROP CONSTRAINT pk_treatments;
+
+ALTER TABLE tests
+DROP CONSTRAINT pk_tests;
+
+ALTER TABLE results
+DROP CONSTRAINT pk_results;
+
+ALTER TABLE medications
+DROP CONSTRAINT pk_medications;
+
+ALTER TABLE prescriptions
+DROP CONSTRAINT pk_prescriptions;
+
+
+-- Dropping Foreign Key Constraints
+
+ALTER TABLE surgeries
+DROP CONSTRAINT fk_s_branches;
+
+ALTER TABLE vets
+DROP CONSTRAINT fk_v_surgeries;
+
+ALTER TABLE appointments
+DROP CONSTRAINT fk_a_vets
+
+ALTER TABLE appointments
+DROP CONSTRAINT fk_a_animals
+
+ALTER TABLE treatments
+DROP CONSTRAINT fk_t_appointments;
+
+ALTER TABLE results
+DROP CONSTRAINT fk_r_tests;
+
+ALTER TABLE results
+DROP CONSTRAINT fk_r_vets;
+
+ALTER TABLE results
+DROP CONSTRAINT fk_r_animals;
+
+ALTER TABLE prescriptions
+DROP CONSTRAINT fk_p_medications;
+
+ALTER TABLE prescriptions
+DROP CONSTRAINT fk_p_animals;
+
+
+-- Dropping Tables
+
 DROP TABLE prescriptions;
 DROP TABLE medications;
 DROP TABLE results;
@@ -8,6 +76,10 @@ DROP TABLE animals;
 DROP TABLE vets;
 DROP TABLE surgeries;
 DROP TABLE branches;
+
+
+-- Purging Tables And Committing
+
 PURGE RECYCLEBIN;
 
 COMMIT;
