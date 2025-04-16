@@ -1,4 +1,5 @@
--- primary keys
+-- Adding Primary Key Constraints
+
 ALTER TABLE branches
 ADD CONSTRAINT pk_branches
 PRIMARY KEY (branch_id);
@@ -40,8 +41,8 @@ ADD CONSTRAINT pk_prescriptions
 PRIMARY KEY (medication_id, pet_number);
 
 
+-- Adding Foreign Key Constraints
 
--- foreign keys
 ALTER TABLE surgeries
 ADD CONSTRAINT fk_s_branches
 FOREIGN KEY (branch_id)
@@ -91,5 +92,8 @@ ALTER TABLE prescriptions
 ADD CONSTRAINT fk_p_animals
 FOREIGN KEY (pet_number)
 REFERENCES animals (pet_number);
+
+
+-- Commiting
 
 COMMIT;
