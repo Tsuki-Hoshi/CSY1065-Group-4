@@ -97,3 +97,20 @@ REFERENCES animals (pet_number);
 -- Commiting
 
 COMMIT;
+
+/*
+Command:
+
+--Describes the table structure
+DESC table_name;
+
+--Lists all tables
+SELECT TNAME FROM TAB;
+
+--Shows all constraints
+SELECT CONSTRAINT_NAME, TABLENAME
+FROM USER_CONSTRAINT;
+
+--Deletes the table
+DROP TABLE table_name;
+*/
