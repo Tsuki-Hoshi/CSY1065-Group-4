@@ -7,10 +7,10 @@ ALTER TABLE vets
 DROP CONSTRAINT fk_v_surgeries;
 
 ALTER TABLE appointments
-DROP CONSTRAINT fk_a_vets
+DROP CONSTRAINT fk_a_vets;
 
 ALTER TABLE appointments
-DROP CONSTRAINT fk_a_animals
+DROP CONSTRAINT fk_a_animals;
 
 ALTER TABLE treatments
 DROP CONSTRAINT fk_t_appointments;
