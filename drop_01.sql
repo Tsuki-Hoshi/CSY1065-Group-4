@@ -1,36 +1,3 @@
--- Dropping Primary Key Constraints
-
-ALTER TABLE branches
-DROP CONSTRAINT pk_branches;
-
-ALTER TABLE surgeries
-DROP CONSTRAINT pk_surgeries;
-
-ALTER TABLE vets
-DROP CONSTRAINT pk_vets;
-
-ALTER TABLE animals
-DROP CONSTRAINT pk_animals;
-
-ALTER TABLE appointments
-DROP CONSTRAINT pk_appointments;
-
-ALTER TABLE treatments
-DROP CONSTRAINT pk_treatments;
-
-ALTER TABLE tests
-DROP CONSTRAINT pk_tests;
-
-ALTER TABLE results
-DROP CONSTRAINT pk_results;
-
-ALTER TABLE medications
-DROP CONSTRAINT pk_medications;
-
-ALTER TABLE prescriptions
-DROP CONSTRAINT pk_prescriptions;
-
-
 -- Dropping Foreign Key Constraints
 
 ALTER TABLE surgeries
@@ -62,6 +29,39 @@ DROP CONSTRAINT fk_p_medications;
 
 ALTER TABLE prescriptions
 DROP CONSTRAINT fk_p_animals;
+
+
+-- Dropping Primary Key Constraints
+
+ALTER TABLE branches
+DROP CONSTRAINT pk_branches;
+
+ALTER TABLE surgeries
+DROP CONSTRAINT pk_surgeries;
+
+ALTER TABLE vets
+DROP CONSTRAINT pk_vets;
+
+ALTER TABLE animals
+DROP CONSTRAINT pk_animals;
+
+ALTER TABLE appointments
+DROP CONSTRAINT pk_appointments;
+
+ALTER TABLE treatments
+DROP CONSTRAINT pk_treatments;
+
+ALTER TABLE tests
+DROP CONSTRAINT pk_tests;
+
+ALTER TABLE results
+DROP CONSTRAINT pk_results;
+
+ALTER TABLE medications
+DROP CONSTRAINT pk_medications;
+
+ALTER TABLE prescriptions
+DROP CONSTRAINT pk_prescriptions;
 
 
 -- Dropping Tables
