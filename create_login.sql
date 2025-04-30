@@ -1,7 +1,6 @@
 CREATE TABLE branches (
 branch_id NUMBER(3),
-name VARCHAR(25),
-house VARCHAR(15),
+branch_name VARCHAR(25),
 house VARCHAR(25),
 street VARCHAR(20),
 postcode VARCHAR(7),
@@ -11,7 +10,7 @@ rating CHAR(1) DEFAULT 'D'
 CREATE TABLE surgeries (
 surgery_id NUMBER(5),
 surgery_date DATE NOT NULL,
-type VARCHAR(8),
+surgery_type VARCHAR(8),
 branch_id NUMBER(3) NOT NULL
 );
 
@@ -31,8 +30,8 @@ breed VARCHAR(20),
 species VARCHAR(20),
 date_of_birth DATE,
 gender CHAR(1),
-weight NUMBER(5,2),
-name VARCHAR(15)
+animal_weight NUMBER(5,2),
+animal_name VARCHAR(15)
 );
 
 CREATE TABLE appointments (
@@ -44,8 +43,8 @@ fee NUMBER(6,2)
 
 CREATE TABLE treatments (
 treatment_id NUMBER(5),
-name VARCHAR(20),
-description VARCHAR(40),
+treatment_name VARCHAR(20),
+treatment_description VARCHAR(40),
 appointment_date DATE,
 duration NUMBER(4),
 vet_id NUMBER(3),
@@ -54,9 +53,9 @@ pet_number NUMBER(5)
 
 CREATE TABLE tests (
 test_id NUMBER(5),
-name VARCHAR(20),
+test_name VARCHAR(20),
 category VARCHAR(20),
-type VARCHAR(10)
+test_type VARCHAR(10)
 );
 
 CREATE TABLE results (
@@ -69,8 +68,8 @@ outcome VARCHAR(20) DEFAULT 'NO ACTION'
 
 CREATE TABLE medications (
 medication_id NUMBER(5),
-name VARCHAR(20),
-description VARCHAR(40)
+medication_name VARCHAR(20),
+medication_description VARCHAR(40)
 );
 
 CREATE TABLE prescriptions (
