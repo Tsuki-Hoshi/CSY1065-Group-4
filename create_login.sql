@@ -2,6 +2,7 @@ CREATE TABLE branches (
 branch_id NUMBER(3),
 name VARCHAR(25),
 house VARCHAR(15),
+house VARCHAR(25),
 street VARCHAR(20),
 postcode VARCHAR(7),
 rating CHAR(1) DEFAULT 'D'
