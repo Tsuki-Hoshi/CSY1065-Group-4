@@ -2,7 +2,7 @@ INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
 VALUES (1, 'NORTHAMPTON BRANCH', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH', 'A');
 
 INSERT INTO surgeries (surgery_id, surgery_date, surgery_type, branch_id)
-VALUES (1, '30-APR-2025', 'SPAY', 1)
+VALUES (1, '30-APR-2025', 'SPAY', 1);
 
 INSERT INTO vets (vet_id, job_role, title, first_name, last_name, phone_number, surgery_id)
 VALUES (1, 'SURGEON', 'DR.', 'DARREN', 'WATKINS', '01234567890', 1);
