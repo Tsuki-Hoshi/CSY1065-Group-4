@@ -1,5 +1,5 @@
-INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
-VALUES (SEQ_BRANCHES.NEXTVAL, 'NORTHAMPTON', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH', 'A');
+INSERT INTO branches
+VALUES (SEQ_BRANCHES.NEXTVAL, 'NORTHAMPTON', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH');
 
 INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
 VALUES (SEQ_BRANCHES.NEXTVAL, 'WELLINGBOROUGH', 'NAT CAMPUS', 'FINDEON ROAD', 'NN8 5PH', 'B');
@@ -13,6 +13,7 @@ VALUES (SEQ_BRANCHES.NEXTVAL, 'LONDON', 'YAMEEN CAMPUS', 'SILENT HILL', 'SW1 0OE
 INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
 VALUES (SEQ_BRANCHES.NEXTVAL, 'LUTON', 'LAKESIDE', 'SANDFORD STREET', 'LU1 5AR', 'A');
 
+COMMIT;
 /*
 INSERT INTO surgeries (surgery_id, surgery_date, surgery_type, branch_id)
 VALUES (1, '30-APR-2025', 'SPAY', 1);
