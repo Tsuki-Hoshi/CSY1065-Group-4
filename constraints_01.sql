@@ -128,10 +128,7 @@ CHECK (job_role = UPPER(job_role)); -- CHECK UPPER
 
 ALTER TABLE vets
 ADD CONSTRAINT ck_v_phonenumber_unique
-CHECK (phone_number UNIQUE(phone_number)); -- CHECK UNIQUE
--- LOOOK HERE!!!!! WHICH ONE IS CORRECT (TOP OR BOTTOM, REMOVE THE INCORRECT ONE!!!!!) - Yam
-ALTER TABLE vets
-ADD CONSTRAINT ck_v_phonenumber_unique UNIQUE (phone_number); -- CHECK UNIQUE
+UNIQUE (phone_number); -- CHECK UNIQUE
 
 -- Committing
 
