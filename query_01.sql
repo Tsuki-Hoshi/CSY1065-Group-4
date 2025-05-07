@@ -19,3 +19,15 @@ FROM USER_SEQUENCES;
 -- Drop Table
 DROP TABLE table_name;
 */
+
+-- Formatting
+
+ALTER SESSION
+SET LINESIZE 100;
+SET WRAP OFF;
+
+
+
+-- Committing
+
+COMMIT;
