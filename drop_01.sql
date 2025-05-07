@@ -1,3 +1,25 @@
+-- CSY1065 AS2 Group 4: Drop
+-- Done By Junyo, Natnael, Warren, Yameen
+
+/* Command List:
+-- Describe Table Structure
+DESC table_name;
+
+-- List All Tables
+SELECT TNAME FROM TAB;
+
+-- Show All Constraints
+SELECT CONSTRAINT_NAME, TABLENAME
+FROM USER_CONSTRAINT;
+
+-- Show All Sequences
+SELECT SEQUENCE_NAME
+FROM USER_SEQUENCES;
+
+-- Drop Table
+DROP TABLE table_name;
+*/
+
 -- Dropping Foreign Key Constraints
 
 ALTER TABLE surgeries
@@ -29,7 +51,6 @@ DROP CONSTRAINT fk_p_medications;
 
 ALTER TABLE prescriptions
 DROP CONSTRAINT fk_p_animals;
-
 
 -- Dropping Primary Key Constraints
 
@@ -63,7 +84,6 @@ DROP CONSTRAINT pk_medications;
 ALTER TABLE prescriptions
 DROP CONSTRAINT pk_prescriptions;
 
-
 -- Dropping Tables
 
 DROP TABLE prescriptions;
@@ -78,6 +98,7 @@ DROP TABLE surgeries;
 DROP TABLE branches;
 
 -- Dropping Sequences
+
 DROP SEQUENCE seq_branches;
 DROP SEQUENCE seq_surgeries;
 DROP SEQUENCE seq_vets;
@@ -91,20 +112,3 @@ DROP SEQUENCE seq_medications;
 PURGE RECYCLEBIN;
 
 COMMIT;
-
-/*
-Command:
-
---Describes the table structure
-DESC table_name;
-
---Lists all tables
-SELECT TNAME FROM TAB;
-
---Shows all constraints
-SELECT CONSTRAINT_NAME, TABLENAME
-FROM USER_CONSTRAINT;
-
---Deletes the table
-DROP TABLE table_name;
-*/
