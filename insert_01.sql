@@ -1,3 +1,25 @@
+-- CSY1065 AS2 Group 4: Inserts
+-- Done By Junyo, Natnael, Warren, Yameen
+
+/* Command List:
+-- Describe Table Structure
+DESC table_name;
+
+-- List All Tables
+SELECT TNAME FROM TAB;
+
+-- Show All Constraints
+SELECT CONSTRAINT_NAME, TABLENAME
+FROM USER_CONSTRAINT;
+
+-- Show All Sequences
+SELECT SEQUENCE_NAME
+FROM USER_SEQUENCES;
+
+-- Drop Table
+DROP TABLE table_name;
+*/
+
 INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
 VALUES (SEQ_BRANCHES.NEXTVAL, 'NORTHAMPTON', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH', 'A');
 
@@ -12,6 +34,10 @@ VALUES (SEQ_BRANCHES.NEXTVAL, 'LONDON', 'YAMEEN CAMPUS', 'SILENT HILL', 'SW1 0OE
 
 INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
 VALUES (SEQ_BRANCHES.NEXTVAL, 'LUTON', 'LAKESIDE', 'SANDFORD STREET', 'LU1 5AR', 'A');
+
+-- Committing
+
+COMMIT;
 
 /*
 INSERT INTO surgeries (surgery_id, surgery_date, surgery_type, branch_id)
