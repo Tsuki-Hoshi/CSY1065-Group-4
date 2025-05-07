@@ -22,8 +22,7 @@ DROP TABLE table_name;
 
 -- Formatting
 
-ALTER SESSION
-SET LINESIZE 100;
+SET LINESIZE 150;
 SET WRAP OFF;
 
 
