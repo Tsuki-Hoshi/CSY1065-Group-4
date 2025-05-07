@@ -1,5 +1,5 @@
-INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
-VALUES (SEQ_BRANCHES.NEXTVAL, 'NORTHAMPTON', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH', 'A');
+INSERT INTO branches
+VALUES (SEQ_BRANCHES.NEXTVAL, 'NORTHAMPTON', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH');
 
 INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
 VALUES (SEQ_BRANCHES.NEXTVAL, 'WELLINGBOROUGH', 'NAT CAMPUS', 'FINDEON ROAD', 'NN8 5PH', 'B');
