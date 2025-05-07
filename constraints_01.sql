@@ -1,3 +1,25 @@
+-- CSY1065 AS2 Group 4: Constraints
+-- Done By Junyo, Natnael, Warren, Yameen
+
+/* Command List:
+-- Describe Table Structure
+DESC table_name;
+
+-- List All Tables
+SELECT TNAME FROM TAB;
+
+-- Show All Constraints
+SELECT CONSTRAINT_NAME, TABLENAME
+FROM USER_CONSTRAINT;
+
+-- Show All Sequences
+SELECT SEQUENCE_NAME
+FROM USER_SEQUENCES;
+
+-- Drop Table
+DROP TABLE table_name;
+*/
+
 -- Adding Primary Key Constraints
 
 ALTER TABLE branches
@@ -39,7 +61,6 @@ PRIMARY KEY (medication_id);
 ALTER TABLE prescriptions
 ADD CONSTRAINT pk_prescriptions
 PRIMARY KEY (medication_id, pet_number);
-
 
 -- Adding Foreign Key Constraints
 
@@ -93,24 +114,6 @@ ADD CONSTRAINT fk_p_animals
 FOREIGN KEY (pet_number)
 REFERENCES animals (pet_number);
 
-
 -- Commiting
 
 COMMIT;
-
-/*
-Command:
-
---Describes the table structure
-DESC table_name;
-
---Lists all tables
-SELECT TNAME FROM TAB;
-
---Shows all constraints
-SELECT CONSTRAINT_NAME, TABLENAME
-FROM USER_CONSTRAINT;
-
---Deletes the table
-DROP TABLE table_name;
-*/
