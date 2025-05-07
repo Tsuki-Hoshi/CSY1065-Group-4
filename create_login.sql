@@ -3,7 +3,7 @@ branch_id NUMBER(3),
 branch_name VARCHAR(25),
 house VARCHAR(25),
 street VARCHAR(20),
-postcode VARCHAR(7),
+postcode VARCHAR(8),
 rating CHAR(1) DEFAULT 'D'
 );
 
@@ -78,6 +78,35 @@ pet_number NUMBER(5),
 quantity NUMBER(3),
 dosage VARCHAR(20)
 );
+
+-- CREATE SEQUENCES
+CREATE SEQUENCE seq_branches
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_surgeries
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_vets
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_animals
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_treatments
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_tests
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_medications
+INCREMENT BY 1
+START WITH 1;
 
 COMMIT;
 

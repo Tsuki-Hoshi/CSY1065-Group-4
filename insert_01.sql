@@ -1,6 +1,19 @@
 INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
-VALUES (1, 'NORTHAMPTON BRANCH', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH', 'A');
+VALUES (SEQ_BRANCHES.NEXTVAL, 'NORTHAMPTON', 'WATERSIDE CAMPUS', 'UNIVERSITY DRIVE', 'NN1 5PH', 'A');
 
+INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
+VALUES (SEQ_BRANCHES.NEXTVAL, 'WELLINGBOROUGH', 'NAT CAMPUS', 'FINDEON ROAD', 'NN8 5PH', 'B');
+
+INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
+VALUES (SEQ_BRANCHES.NEXTVAL, 'BEDFORD', 'JUNYO CAMPUS', 'SALAZAR ROAD', 'MK40 9LE', 'C');
+
+INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
+VALUES (SEQ_BRANCHES.NEXTVAL, 'LONDON', 'YAMEEN CAMPUS', 'SILENT HILL', 'SW1 0OE', 'D');
+
+INSERT INTO branches (branch_id, branch_name, house, street, postcode, rating)
+VALUES (SEQ_BRANCHES.NEXTVAL, 'LUTON', 'LAKESIDE', 'SANDFORD STREET', 'LU1 5AR', 'A');
+
+/*
 INSERT INTO surgeries (surgery_id, surgery_date, surgery_type, branch_id)
 VALUES (1, '30-APR-2025', 'SPAY', 1);
 
@@ -26,4 +39,4 @@ INSERT INTO medications (medication_id, medication_name, medication_description)
 VALUES (1, 'AMOXICILLIN', 'ANTIBIOTIC FOR BACTERIAL INFECTIONS');
 
 INSERT INTO prescriptions (medication_id, pet_number, quantity, dosage)
-VALUES (1, 1, 10, '2 PER DAY');
+VALUES (1, 1, 10, '2 PER DAY'); */

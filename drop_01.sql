@@ -77,6 +77,14 @@ DROP TABLE vets;
 DROP TABLE surgeries;
 DROP TABLE branches;
 
+-- Dropping Sequences
+DROP SEQUENCE seq_branches;
+DROP SEQUENCE seq_surgeries;
+DROP SEQUENCE seq_vets;
+DROP SEQUENCE seq_animals;
+DROP SEQUENCE seq_treatments;
+DROP SEQUENCE seq_tests;
+DROP SEQUENCE seq_medications;
 
 -- Purging Tables And Committing
 
