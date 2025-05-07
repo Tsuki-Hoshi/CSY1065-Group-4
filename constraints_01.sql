@@ -114,6 +114,25 @@ ADD CONSTRAINT fk_p_animals
 FOREIGN KEY (pet_number)
 REFERENCES animals (pet_number);
 
+-- Doing IN Check On Branches
+
+ALTER TABLE branches
+ADD CONSTRAINT ck_b_rating
+CHECK (rating IN ('A', 'B', 'C', 'D', 'E'));
+
+-- Doing UPPER And UNIQUE Checks On Vets
+
+ALTER TABLE vets
+ADD CONSTRAINT ck_v_jobrole_upper
+CHECK (job_role = UPPER(job_role)); -- CHECK UPPER
+
+ALTER TABLE vets
+ADD CONSTRAINT ck_v_phonenumber_unique
+CHECK (phone_number UNIQUE(phone_number)); -- CHECK UNIQUE
+-- LOOOK HERE!!!!! WHICH ONE IS CORRECT (TOP OR BOTTOM, REMOVE THE INCORRECT ONE!!!!!) - Yam
+ALTER TABLE vets
+ADD CONSTRAINT ck_v_phonenumber_unique UNIQUE (phone_number); -- CHECK UNIQUE
+
 -- Committing
 
 COMMIT;
