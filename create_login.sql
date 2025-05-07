@@ -1,3 +1,27 @@
+-- CSY1065 AS2 Group 4: Create Login
+-- Done By Junyo, Natnael, Warren, Yameen
+
+/* Command List:
+-- Describe Table Structure
+DESC table_name;
+
+-- List All Tables
+SELECT TNAME FROM TAB;
+
+-- Show All Constraints
+SELECT CONSTRAINT_NAME, TABLENAME
+FROM USER_CONSTRAINT;
+
+-- Show All Sequences
+SELECT SEQUENCE_NAME
+FROM USER_SEQUENCES;
+
+-- Drop Table
+DROP TABLE table_name;
+*/
+
+-- Creating Tables
+
 CREATE TABLE branches (
 branch_id NUMBER(3),
 branch_name VARCHAR(25),
@@ -79,7 +103,8 @@ quantity NUMBER(3),
 dosage VARCHAR(20)
 );
 
--- CREATE SEQUENCES
+-- Creating Sequences
+
 CREATE SEQUENCE seq_branches
 INCREMENT BY 1
 START WITH 1;
@@ -108,21 +133,6 @@ CREATE SEQUENCE seq_medications
 INCREMENT BY 1
 START WITH 1;
 
+-- Committing
+
 COMMIT;
-
-/*
-Command:
-
---Describes the table structure
-DESC table_name;
-
---Lists all tables
-SELECT TNAME FROM TAB;
-
---Shows all constraints
-SELECT CONSTRAINT_NAME, TABLENAME
-FROM USER_CONSTRAINT;
-
---Deletes the table
-DROP TABLE table_name;
-*/
