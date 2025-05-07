@@ -39,4 +39,4 @@ INSERT INTO medications (medication_id, medication_name, medication_description)
 VALUES (1, 'AMOXICILLIN', 'ANTIBIOTIC FOR BACTERIAL INFECTIONS');
 
 INSERT INTO prescriptions (medication_id, pet_number, quantity, dosage)
-VALUES (1, 1, 10, '2 PER DAY'); */
+VALUES (1, 1, 10, '2 PER DAY');
