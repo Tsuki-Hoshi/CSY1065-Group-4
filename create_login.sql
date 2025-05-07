@@ -34,7 +34,7 @@ rating CHAR(1) DEFAULT 'D'
 CREATE TABLE surgeries (
 surgery_id NUMBER(5),
 surgery_date DATE NOT NULL,
-surgery_type VARCHAR(8),
+surgery_type VARCHAR(14),
 branch_id NUMBER(3) NOT NULL
 );
 
