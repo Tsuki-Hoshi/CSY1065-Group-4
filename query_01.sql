@@ -26,14 +26,17 @@ SET LINESIZE 150;
 SET WRAP OFF;
 
 -- Query, Projection
+
 SELECT branch_name 
 FROM branches;
 
--- Table Alias/ Column Alias
+-- Table Alias / Column Alias
+
 SELECT t.test_name "Test Name"
 FROM tests t;
 
 -- Restriction & Predicate
+
 SELECT treatment_name, treatment_description
 FROM treatments
 WHERE treatment_name = 'MEDICATION';
@@ -78,30 +81,31 @@ SELECT *
 FROM animals
 WHERE breed IS NULL;
 
-
 -- Joins
+
 SELECT animal_name, appointment_date
 FROM animals
 JOIN appointments ON animals.pet_number = appointments.pet_number;
 
 -- Multi Joins
+
 SELECT animal_name , appointment_date, first_name
 FROM animals
 JOIN appointments ON animals.pet_number = appointments.pet_number
 JOIN vets ON appointments.vet_id = vets.vet_id;
 
--- Complex queries
+-- Complex Queries
+
 SELECT a.animal_name, t.test_name, r.outcome
 FROM animals a
 JOIN results r ON a.pet_number = r.pet_number
 JOIN tests t ON r.test_id = t.test_id
 WHERE r.outcome = 'NORMAL' AND a.animal_weight > 25;
 
-
 -- Cartesian Product
+
 SELECT outcome, test_name
 FROM results, tests;
-
 
 -- Committing
 
