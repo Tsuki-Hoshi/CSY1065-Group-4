@@ -22,6 +22,8 @@ DROP TABLE table_name;
 
 -- Creating Tables
 
+
+-- Branches table
 CREATE TABLE branches (
 branch_id NUMBER(3),
 branch_name VARCHAR(25),
@@ -31,6 +33,7 @@ postcode VARCHAR(8),
 rating CHAR(1) DEFAULT 'D'
 );
 
+-- Surgeries table
 CREATE TABLE surgeries (
 surgery_id NUMBER(5),
 surgery_date DATE NOT NULL,
@@ -38,6 +41,7 @@ surgery_type VARCHAR(14),
 branch_id NUMBER(3) NOT NULL
 );
 
+-- Vets table
 CREATE TABLE vets (
 vet_id NUMBER(3),
 job_role VARCHAR(12),
@@ -47,6 +51,8 @@ last_name VARCHAR(20),
 phone_number VARCHAR(13),
 surgery_id NUMBER(5) NOT NULL
 );
+
+-- Animals table
 
 CREATE TABLE animals (
 pet_number NUMBER(5),
@@ -58,12 +64,16 @@ animal_weight NUMBER(5,2),
 animal_name VARCHAR(15)
 );
 
+-- Appointments table
+
 CREATE TABLE appointments (
 vet_id NUMBER(3),
 pet_number NUMBER(5),
 appointment_date DATE,
 fee NUMBER(6,2)
 );
+
+-- Treatments table
 
 CREATE TABLE treatments (
 treatment_id NUMBER(5),
@@ -75,12 +85,15 @@ vet_id NUMBER(3),
 pet_number NUMBER(5)
 );
 
+-- Tests table
 CREATE TABLE tests (
 test_id NUMBER(5),
 test_name VARCHAR(20),
 category VARCHAR(20),
 test_type VARCHAR(10)
 );
+
+-- Results table
 
 CREATE TABLE results (
 test_id NUMBER(5),
@@ -90,12 +103,14 @@ result_date DATE,
 outcome VARCHAR(20) DEFAULT 'NO ACTION'
 );
 
+-- Medications table
 CREATE TABLE medications (
 medication_id NUMBER(5),
 medication_name VARCHAR(20),
 medication_description VARCHAR(40)
 );
 
+-- Prescriptions table
 CREATE TABLE prescriptions (
 medication_id NUMBER(5),
 pet_number NUMBER(5),
@@ -105,34 +120,42 @@ dosage VARCHAR(20)
 
 -- Creating Sequences
 
+-- Branches Sequence
 CREATE SEQUENCE seq_branches
 INCREMENT BY 1
 START WITH 1;
 
+-- Surgeries Sequence
 CREATE SEQUENCE seq_surgeries
 INCREMENT BY 1
 START WITH 1;
 
+-- Vets Sequence
 CREATE SEQUENCE seq_vets
 INCREMENT BY 1
 START WITH 1;
 
+-- Animals Sequence
 CREATE SEQUENCE seq_animals
 INCREMENT BY 1
 START WITH 1;
 
+-- Treatments Sequence
 CREATE SEQUENCE seq_treatments
 INCREMENT BY 1
 START WITH 1;
 
+-- Tests Sequence
 CREATE SEQUENCE seq_tests
 INCREMENT BY 1
 START WITH 1;
 
+-- Medication Sequence
 CREATE SEQUENCE seq_medications
 INCREMENT BY 1
 START WITH 1;
 
+SELECT TNAME FROM TAB;
 -- Committing
 
 COMMIT;
