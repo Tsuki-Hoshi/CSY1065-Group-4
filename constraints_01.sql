@@ -15,8 +15,8 @@ DESC table_name;
 SELECT TNAME FROM TAB;
 
 -- Show All Constraints
-SELECT CONSTRAINT_NAME, TABLENAME
-FROM USER_CONSTRAINT;
+SELECT CONSTRAINT_NAME, TABLE_NAME
+FROM USER_CONSTRAINTS;
 
 -- Show All Sequences
 SELECT SEQUENCE_NAME
@@ -26,7 +26,7 @@ FROM USER_SEQUENCES;
 DROP TABLE table_name;
 */
 
--- Adding Primary Key Constraints , 10 Total
+-- Adding Primary Key Constraints , 10 Total 3 Compounds
 
 ALTER TABLE branches
 ADD CONSTRAINT pk_branches
@@ -68,7 +68,7 @@ ALTER TABLE prescriptions -- Compound Primary Key
 ADD CONSTRAINT pk_prescriptions
 PRIMARY KEY (medication_id, pet_number);
 
--- Adding Foreign Key Constraints , 10
+-- Adding Foreign Key Constraints , 10 1 Compound
 
 ALTER TABLE surgeries
 ADD CONSTRAINT fk_s_branches
