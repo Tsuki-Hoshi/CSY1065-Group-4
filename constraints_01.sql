@@ -1,6 +1,12 @@
 -- CSY1065 AS2 Group 4: Constraints
 -- Done By Junyo, Natnael, Warren, Yameen
+/*
+CSY1065_227@database/23855548
+@C:\GitHub\CSY1065-Group-4\create_login.sql
+@C:\GitHub\CSY1065-Group-4\constraints_01.sql
 
+@C:\GitHub\CSY1065-Group-4\drop_01.sql
+*/
 /* Command List:
 -- Describe Table Structure
 DESC table_name;
@@ -20,7 +26,7 @@ FROM USER_SEQUENCES;
 DROP TABLE table_name;
 */
 
--- Adding Primary Key Constraints
+-- Adding Primary Key Constraints , 10 Total
 
 ALTER TABLE branches
 ADD CONSTRAINT pk_branches
@@ -62,7 +68,7 @@ ALTER TABLE prescriptions
 ADD CONSTRAINT pk_prescriptions
 PRIMARY KEY (medication_id, pet_number);
 
--- Adding Foreign Key Constraints
+-- Adding Foreign Key Constraints , 10
 
 ALTER TABLE surgeries
 ADD CONSTRAINT fk_s_branches
